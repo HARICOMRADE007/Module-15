@@ -19,11 +19,40 @@ To write a Python program to build a binary tree with a root, left, and right no
 ## PYTHON PROGRAM
 
 ```
-ENTER YOUR CODE
+#Reg.No: 212222060074
+#Name: Hariharan K
+#Add Your Code Here
+from binarytree import build,Node
+
+def bst(x):
+    if len(x)==0:
+        return None
+    
+    mid = len(x)//2
+    root=Node(x[mid])
+    root.left=bst(x[:mid])
+    root.right=bst(x[mid+1:])
+    return root 
+
+
+l=[1,2,3,5,4,6]
+
+print("BST before insertion:")
+xbst=bst(sorted(l))
+for i in xbst.values:
+    print(i,"-->",end="")
+    
+print()
+print("BST after insertion:")
+l.append(int(input()))
+xbst=bst(sorted(l))
+for i in xbst.values:
+    print(i,"-->",end="")
 ```
 
 ## OUTPUT
-```
-```
+<img width="1185" height="270" alt="image" src="https://github.com/user-attachments/assets/1b4d1160-b255-47e1-adae-52650f00d704" />
+
 
 ## RESULT
+Therefore, the output is the example to write a Python program to build a binary tree with a root, left, and right node using floating-point values.
